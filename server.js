@@ -4,7 +4,7 @@ const api = require('./routes/index.js');
 const path = require('path');
 const notes = require('./routes/notes');
 const app = express();
-const PORT = 3001;
+const PORT = 5501;
 
 
 app.use(express.json());
