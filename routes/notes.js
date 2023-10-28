@@ -26,17 +26,15 @@ notes.post('/', (req, res) => {
   }
 });
 
-notes.delete('/notes', (req,res) => {
-  const found = notes.findIndex( i => parseInt(req.params.id) === i.id ? i :'') 
-  console.log(found)
-  if (found >= 0){
-   notes.splice( found,1)
-   res.json({
-     success:false,
-     error: "We cant delete this post"
-   })
-  }
-})
+// const deleteNote = (req,res) => {
+//     notes.deleteOne({ _id: req.params._id })
+//         .then((result) => {
+//             res.json({ result: result });
+//         })
+//         .catch((error) => {
+//             res.status(400).json({ ...error, message: error.message });
+//         });
+// };
 
 
 
